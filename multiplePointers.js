@@ -54,6 +54,8 @@ function maxSubArraySum(arr, num){
     
 }
 
+// Frequency Counter
+
 function sameFrequency(num1,num2){
     let freqCounter = {};
     num1 = [...num1];
@@ -71,3 +73,18 @@ function sameFrequency(num1,num2){
     }
     return true
 }
+
+function areThereDuplicates(...args) {
+    // Two pointers
+    args.sort((a,b) => a > b);
+    let start = 0;
+    let next = 1;
+    while(next < args.length){
+      if(args[start] === args[next]){
+          return true
+      }
+      start++
+      next++
+    }
+    return false
+  }
