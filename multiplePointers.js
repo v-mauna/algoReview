@@ -46,7 +46,6 @@ function maxSubArraySum(arr, num){
     }
     tempSum = maxSum;
     for (let i=num; i < arr.length; i++){
-        console.log('arr[i-num]', arr[i-num])
         tempSum = tempSum - arr[i-num] + arr[i];
         maxSum = Math.max(maxSum, tempSum)
     }
